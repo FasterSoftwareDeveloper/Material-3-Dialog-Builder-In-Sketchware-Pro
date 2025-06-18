@@ -1,0 +1,315 @@
+[
+  {
+    "code": "",
+    "imports": "",
+    "color": "#FF000000",
+    "name": "Credit",
+    "typeName": "",
+    "palette": "15",
+    "type": "h",
+    "spec": "M3 Alert Dialog Builder. By Faster Software Developer"
+  },
+  {
+    "code": "MaterialAlertDialogBuilder %1$s \u003d new MaterialAlertDialogBuilder(%2$s);\n%4$s\n%1$s.setCancelable(%3$s);\n%1$s.create().show();",
+    "imports": "com.google.android.material.dialog.MaterialAlertDialogBuilder",
+    "color": "#FF5722",
+    "name": "M3 Alert Dialog",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "M3 Alert Dialog %m.Dialog Activity/Fragment %s  Cancelable %b "
+  },
+  {
+    "code": "%1$s.setTitle(%2$s);",
+    "color": "#FF5722",
+    "name": "Dialog Title",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 %m.Dialog Dialog Title %s "
+  },
+  {
+    "code": "%1$s.setMessage(%2$s);",
+    "color": "#FF5722",
+    "name": "Dialog Massage",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 %m.Dialog Dialog Massage %s "
+  },
+  {
+    "code": "%1$s.setIcon(%2$s);",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "Dialog Icon",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 %m.Dialog Dialog Icon %s"
+  },
+  {
+    "code": "%2$s.setFocusableInTouchMode(%1$s);",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "Edittext Focusable In Touch Mode",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "Edittext Focusable In Touch Mode %b Edittext Id %s.inputOnly  "
+  },
+  {
+    "code": "%1$s.setPositiveButton(%2$s, new DialogInterface.OnClickListener() {\n    @Override\n    public void onClick(DialogInterface _dialog, int _which) {\n        %3$s\n    }\n});",
+    "color": "#FF5722",
+    "name": "M3 Positive Button",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "Positive Button %m.Dialog Button Name%s "
+  },
+  {
+    "code": "%1$s.setNegativeButton(%2$s, new DialogInterface.OnClickListener() {\n    @Override\n    public void onClick(DialogInterface _dialog, int _which) {\n        %3$s\n    }\n});",
+    "color": "#FF5722",
+    "name": "M3 Negative Button",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "Negative Button %m.Dialog Button Name%s "
+  },
+  {
+    "code": "%1$s.setNeutralButton(%2$s, new DialogInterface.OnClickListener() {\n    @Override\n    public void onClick(DialogInterface _dialog, int _which) {\n        %3$s\n    }\n});",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Neutral Button",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "Neutral Button %m.Dialog Button Name%s "
+  },
+  {
+    "code": "final String[] %3$s \u003d %2$s.toArray(new String[0]);\n%1$s.setItems(%3$s, new DialogInterface.OnClickListener() {\n@Override\npublic void onClick(DialogInterface dialog, int which) {\nString %4$s \u003d %3$s[which];\n%5$s\n}\n});",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog With Items List",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "M3 Dialog With Items List %m.Dialog List String %m.listStr String[] Name %s.inputOnly Selected Item String %m.String"
+  },
+  {
+    "code": "final String[] %3$s \u003d %2$s.toArray(new String[0]);\nfinal boolean[] checkedItems \u003d new boolean[%3$s.length];\nfinal ArrayList\u003cString\u003e %4$s \u003d new ArrayList\u003c\u003e();\n%1$s.setMultiChoiceItems(%3$s, checkedItems, new DialogInterface.OnMultiChoiceClickListener() {\n@Override\npublic void onClick(DialogInterface dialog, int which, boolean isChecked) {\nif (isChecked) {\nif (!%4$s.contains(%3$s[which])) {\n%4$s.add(%3$s[which]);\n%5$s\n}\n} else {\n%4$s.remove(%3$s[which]);\n%6$s\n}\n}\n});",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog With Multi Selection",
+    "typeName": "",
+    "palette": "15",
+    "type": "e",
+    "spec": "M3 Dialog With Multi Selection %m.Dialog List String %m.listStr String[] Name %s.inputOnly boolean[] Name %s.inputOnly",
+    "spec2": "else (unchecked)"
+  },
+  {
+    "code": "final String[] %3$s \u003d %2$s.toArray(new String[0]);\nfinal int[] %4$s \u003d {-1};\n%1$s.setSingleChoiceItems(%3$s, -1, new DialogInterface.OnClickListener() {\n@Override\npublic void onClick(DialogInterface dialog, int which) {\n%4$s[0] \u003d which;\n%5$s\n}\n});",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog Single Selection",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "M3 Dialog Single Selection %m.Dialog List String %m.listStr String[] Name %s.inputOnly Track Selected Index Name %s.inputOnly "
+  },
+  {
+    "code": "",
+    "imports": "",
+    "color": "#FF000000",
+    "name": "M3 Dialog Type Custom",
+    "typeName": "",
+    "palette": "15",
+    "type": "h",
+    "spec": "M3 Dialog Type Custom"
+  },
+  {
+    "code": "MaterialAlertDialogBuilder %1$s \u003d new MaterialAlertDialogBuilder(%2$s);",
+    "imports": "com.google.android.material.dialog.MaterialAlertDialogBuilder",
+    "color": "#FFEF5350",
+    "name": "M3 Custom Dialog Builder",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 Alert Dialog %m.Dialog Activity/Fragment %s"
+  },
+  {
+    "code": "androidx.appcompat.app.AlertDialog %2$s \u003d %1$s.create();\n%4$s\n%2$s.setCancelable(%3$s);\n%2$s.show();",
+    "imports": "",
+    "color": "#FFEF5350",
+    "name": "M3 Custom Dialog Set",
+    "typeName": "",
+    "palette": "15",
+    "type": "c",
+    "spec": "M3 Custom Dialog Set Old Name %m.Dialog to %m.Dialog Cancelable %b"
+  },
+  {
+    "code": "View %2$s \u003d LayoutInflater.from(%3$s).inflate(R.layout.%4$s, null);\n%1$s.setView(%2$s);\r",
+    "imports": "",
+    "color": "#FFEF5350",
+    "name": "M3 Custom Dialog",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 Dialog %m.Dialog Custom View Name %s.inputOnly Activity/Fragment %s  Layout %m.layout "
+  },
+  {
+    "code": "final %1$s %3$s \u003d %2$s.findViewById(R.id.%4$s);",
+    "imports": "",
+    "color": "#FFEF5350",
+    "name": "View In Dialog",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "View %m.typeview CustomView Name %s.inputOnly View Id %s.inputOnly FindById %s.inputOnly "
+  },
+  {
+    "code": "%1$s.setView(%2$s);",
+    "color": "#F44336",
+    "name": "M3 Dialog SetView",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 Dialog %m.Dialog setView %s.inputOnly"
+  },
+  {
+    "code": "%1$s.setOnClickListener(%2$s -\u003e {\n%3$s\n});",
+    "imports": "",
+    "color": "#FFEF5350",
+    "name": "Custom Dialog Click listeners",
+    "typeName": "Custom Dialog Click listeners",
+    "palette": "15",
+    "type": "c",
+    "spec": "Custom Dialog Click listeners %m.view ClickOn %s.inputOnly "
+  },
+  {
+    "code": "",
+    "color": "#FF000000",
+    "name": "M3 Dialog Important Blocks",
+    "typeName": "",
+    "palette": "15",
+    "type": "h",
+    "spec": "M3 Dialog Important Blocks"
+  },
+  {
+    "code": "%1$s.dismiss();",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "Dismiss Custom M3 Dialog",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "Dismiss Custom M3 Dialog - %m.Dialog"
+  },
+  {
+    "code": "%1$s.this",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog (Activity)",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Activity %m.activity"
+  },
+  {
+    "code": "getContext()",
+    "color": "#FF5722",
+    "name": "M3 Dialog (Fragment) 2",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Fragment (getContext)"
+  },
+  {
+    "code": "requireContext()",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog (Fragment)",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Fragment (requireContext)"
+  },
+  {
+    "code": "getActivity()",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog (Fragment) 3",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Fragment (getActivity)"
+  },
+  {
+    "imports": "androidx.core.content.ContextCompat",
+    "code": "Drawable %4$s \u003d ContextCompat.getDrawable(%1$s, R.drawable.%2$s);\nif (%4$s !\u003d null) {\n    TypedValue typedValue \u003d new TypedValue();\n    %1$s.getTheme().resolveAttribute(R.attr.%3$s, typedValue, true);\n    int resolvedColor \u003d ContextCompat.getColor(%1$s, typedValue.resourceId);\n    %4$s.setTint(resolvedColor);\n}",
+    "color": "#FF5722",
+    "name": "M3 Dialog Icon Tint Color",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 Dialog Icon Tint Color - Activity/Fragment %s Image %m.BackgroundImage Attribute Name (Color) %s.inputOnly Drawable %s.inputOnly"
+  },
+  {
+    "code": "R.drawable.%1$s",
+    "color": "#FF5722",
+    "name": "M3 Dialog Icon",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Drawable %m.BackgroundImage"
+  },
+  {
+    "code": "%1$s",
+    "color": "#FF5722",
+    "name": "M3 Dialog - Custom Icon",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "Icon Name %s.inputOnly"
+  },
+  {
+    "code": "%1$s.setImageResource(R.drawable.%2$s);",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog setImage",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "M3 Dialog - %m.imageview setImage %m.Image"
+  },
+  {
+    "code": "%1$s.toString()",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog boolean[]",
+    "typeName": "",
+    "palette": "15",
+    "type": "s",
+    "spec": "M3 Dialog - boolean[] Name %s.inputOnly"
+  },
+  {
+    "code": "if (%1$s[0] !\u003d -1) {\n%2$s \u003d %3$s[%1$s[0]];\n%4$s\n} else {\n%5$s\n}",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog Get Single Selection Data",
+    "typeName": "",
+    "palette": "15",
+    "type": "e",
+    "spec": "M3 Dialog Get Single Selection Data - Index Name %s.inputOnly To String %m.String String[] Name %s.inputOnly",
+    "spec2": "else data is empty"
+  },
+  {
+    "code": "TextView %1$s \u003d new TextView(%2$s);\n%1$s.setTextIsSelectable(true);\n%1$s.setPadding(40, 40, 40, 40);\n%1$s.setTextSize(14);\r\n%1$s.setText(%3$s);",
+    "imports": "",
+    "color": "#FF5722",
+    "name": "M3 Dialog Text Selection Massage",
+    "typeName": "",
+    "palette": "15",
+    "type": " ",
+    "spec": "(Place it above the dialog) M3 Dialog Text Selection Massage - View Name %s.inputOnly Activity/Fragment %s Massage %s"
+  }
+]
