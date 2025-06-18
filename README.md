@@ -28,7 +28,6 @@ A modern Material 3 style dialog builder for Sketchware Pro with full support fo
 ## 🔧 Requirements
 
 - ✅ Sketchware Pro (Nightly Version)
-- ✅ API Level 26 (Android 8.0)
 - ✅ Java 11 support (used by default in the project)
 
 ---
